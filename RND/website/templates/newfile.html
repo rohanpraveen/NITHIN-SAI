@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+          <a class="nav-item nav-link" id="logout" href="/x">X PAGE</a>
+          <a class="nav-item nav-link" id="logout" href="/y">Y PAGE</a>
+          <a class="nav-item nav-link" id="logout" href="/z">Z PAGE</a>
+          
+        </div>
+      </div>
+    </nav>
+
+      
+
+    <div class="container">
+
+
+
+  <!Doctype Html>  
+  <Html>     
+  <Head>      
+  
+  <style>  
+  body  
+  {  
+  background-image:url("");  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }  
+  </style>  
+  </Head>  
+  <Body>     
+  </Body>  
+  </Html>  
+  
+
+
+
+
+
+
+  <h1 align="center">CONTENT </h1>
+  <ul class="list-group list-group-flush" id="notes">
+    
+    <table id="example-table" border = "2" width = "1000" height = "100" bgcolor = #5cf37a>
+    <tr>
+      <th>Title</th>
+      <th>  Author</th>
+      <th>  Teacher</th>
+      <th>  Journal</th>
+      <th>  Year </th>
+      <th>  Link</th>
+      <th>  Index</th>
+      <th>  file</th>
+    </tr>
+    
+    <tr>
+      <td>dsfsdgdg</td>
+      <td>dfgdfg</td>
+      <td>fdgfdg</td>
+      <td>gdfgf</td>
+      <td>fdgdfg</td>
+      <td></td>
+      <td>gdfg</td>
+      <td>No file</td>
+      <td><button type="button" class="close" onClick="deleteNote( 2  )">
+        <span aria-hidden="true">&times;</span>
+      </button></td>
+    </tr>
+    
+  </table>
+    
+  </ul><br>
+  <br>
+
+  <form method="POST" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Title of paper" style="background-color:#5cf37a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <input type="text" name="author" placeholder="Name of the author" style="background-color:#5cf37a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <input type="text" name="teacher" placeholder="Department of the teacher" style="background-color:#5cf37a"><br> 
+    <br>
+    <input type="text" name="journal" placeholder="Name of journal" style="background-color:#5cf37a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="text" name="year" placeholder="Year of publication" style="background-color:#5cf37a" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <input type="text" name="link" placeholder="Link" style="background-color:#5cf37a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+    <br>
+    <input type="text" name="index" placeholder="h-index" style="background-color:#5cf37a">
+    <br/>
+    <br>
+    <div>
+      <input type="file" name="file"  value="Upload" >
+    </div>
+    <br>
+    <div style='text-align: center;'><br>
+      
+      <button type="submit" class="btn btn-primary">SUBMIT</button>
+    </div>
+   
+    
+  </form>
+  <script src="Table2Excel">
+   
+  </script>
+  <a href="/download"><button  id="downloadexcel" >Download data</button></a>
+
+  </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="/static/index.js"
+    ></script>
+  </body>
+  <script>
+   document.getElementById(downloadexcel).addEventListener('click',function(){
+    var table2excel = new Table2Excel();
+  table2excel.export(document.querySelectorAll("example-table"));
+   });
+  </script>
+</html>
